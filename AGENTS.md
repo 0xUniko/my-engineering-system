@@ -5,4 +5,4 @@
 - Use polymorphism only for genuine parametric genericity; do not use inheritance or runtime dispatch.
 - Avoid explicit loops unless explicitly allowed; use idiomatic functional combinators such as `map`, `filter`, `fold`, and language-specific equivalents.
 - Except where required by third-party APIs, mutable state may exist only as state threaded through `fold`.
-- Keep a stable name stem for a value while it should be mentally tracked as the same thing; carry it across local bindings and function boundaries rather than renaming it for how it is produced, stored, moved, or accessed. Change the name only when a new distinction must itself be tracked thereafter.
+- Name values by their semantic role, not their representation or origin. Use singular names for elements and plural names for collections when appropriate. Preserve name stems across bindings and function boundaries unless the meaning changes.
